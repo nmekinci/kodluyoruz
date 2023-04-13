@@ -250,7 +250,7 @@ FF 0-49
 
 // work with DOM
 let gr = document.querySelector("#board");
-gr.addEventListener("click", domClick); // the click is a command and we can change it
+gr.addEventListener("click", domClick);
 
 function domClick() {
   console.log("clicked");
