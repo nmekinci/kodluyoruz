@@ -249,16 +249,38 @@ FF 0-49
 // helloFuncV4('there are more than one process', 'and we need to use curly braces again')
 
 // work with DOM
-let gr = document.querySelector("#board");
-gr.addEventListener("click", domClick); // the click is a command and we can change it
+// let gr = document.querySelector("#board");
+// gr.addEventListener("click", domClick); // the click is a command and we can change it
 
-function domClick() {
-  console.log("clicked");
-  console.log(this);
-  console.log(this.innerHTML);
-  console.log((this.innerHTML = "if we can reach innerHTML we can change it"));
-  //this.style.color = 'blue'
-  this.style.color == "blue"
-    ? (this.style.color = "red")
-    : (this.style.color = "blue");
+// function domClick() {
+//   console.log("clicked");
+//   console.log(this);
+//   console.log(this.innerHTML);
+//   console.log((this.innerHTML = "if we can reach innerHTML we can change it"));
+//   //this.style.color = 'blue'
+//   this.style.color == "blue"
+//     ? (this.style.color = "red")
+//     : (this.style.color = "blue");
+// }
+
+// js -- end of the level
+
+let counter = 0;
+let counterDom = document.querySelector("#counter");
+let increaseDom = document.querySelector("#increase");
+let decreaseDom = document.querySelector("#decrease");
+
+counterDom.innerHTML = counter;
+increaseDom.addEventListener("click", clickEvent);
+decreaseDom.addEventListener("click", clickEvent);
+function clickEvent() {
+  console.log(this.id);
+  // if (this.id == "increase") {
+  //   counterDom.innerHTML = counter += 1;
+  // }
+  // else {
+  //   counterDom.innerHTML = counter -= 1;
+  // }
+  this.id == "increase" ? (counter += 1) : (counter -= 1);
+  counterDom.innerHTML = counter;
 }
