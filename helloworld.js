@@ -265,22 +265,31 @@ FF 0-49
 
 // js -- end of the level
 
-let counter = 0;
-let counterDom = document.querySelector("#counter");
-let increaseDom = document.querySelector("#increase");
-let decreaseDom = document.querySelector("#decrease");
+// let counter = 0;
+// let counterDom = document.querySelector("#counter");
+// let increaseDom = document.querySelector("#increase");
+// let decreaseDom = document.querySelector("#decrease");
 
-counterDom.innerHTML = counter;
-increaseDom.addEventListener("click", clickEvent);
-decreaseDom.addEventListener("click", clickEvent);
-function clickEvent() {
-  console.log(this.id);
-  // if (this.id == "increase") {
-  //   counterDom.innerHTML = counter += 1;
-  // }
-  // else {
-  //   counterDom.innerHTML = counter -= 1;
-  // }
-  this.id == "increase" ? (counter += 1) : (counter -= 1);
-  counterDom.innerHTML = counter;
-}
+// counterDom.innerHTML = counter;
+// increaseDom.addEventListener("click", clickEvent);
+// decreaseDom.addEventListener("click", clickEvent);
+// function clickEvent() {
+//   console.log(this.id);
+//   // if (this.id == "increase") {
+//   //   counterDom.innerHTML = counter += 1;
+//   // }
+//   // else {
+//   //   counterDom.innerHTML = counter -= 1;
+//   // }
+//   this.id == "increase" ? (counter += 1) : (counter -= 1);
+//   counterDom.innerHTML = counter;
+// }
+
+// adding data with local storage
+
+let user = { userName: "mstf", isActive: true };
+console.log(user)
+localStorage.setItem("userInfo", JSON.stringify(user));
+let userInfo = localStorage.getItem('userInfo')
+userInfo = JSON.parse(userInfo)
+console.log(userInfo)
